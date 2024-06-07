@@ -1,0 +1,32 @@
+@use "../general/style.scss" as *;
+
+.collapse {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+
+  &__barre {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 50%;
+    background-color: $main-color;
+    border-radius: 15px;
+  }
+  &__hidden {
+    background-color: blue;
+  }
+  h2 {
+    color: white;
+    margin-left: 10px;
+    font-size: 2rem;
+  }
+  .fa-solid {
+    color: white;
+    font-size: 2rem;
+  }
+  .fa-angle-down {
+    z-index: -1;
+  }
+}
