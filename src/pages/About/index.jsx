@@ -2,6 +2,7 @@ import Banner from "../../componants/Banner";
 import Collapse from "../../componants/Collapse";
 import { aboutList } from "../../data/about/aboutList";
 import Background from "../../assets/BannerBG2.png";
+import "../../styles/css/about/style.css";
 
 function About() {
   return (
