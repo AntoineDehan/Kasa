@@ -28,23 +28,28 @@ function Slider({ images }) {
   return (
     <div className="slideshow">
       <img className="slideshow__img" src={images[slideNumber]} alt="" />
-      <div className="slideshow__arrow">
-        <img
-          className="gauche"
-          src={arrowLeft}
-          alt="Flèche de gauche"
-          onClick={sliderLeft}
-        />
-        <img
-          className="droite"
-          src={arrowRight}
-          alt="Flèche de droite"
-          onClick={sliderRight}
-        />
-      </div>
-      <p className="slideshow__counter">
-        {slideNumber + 1}/{images.length}
-      </p>
+
+      {images.length > 1 && (
+        <>
+          <div className="slideshow__arrow">
+            <img
+              className="gauche"
+              src={arrowLeft}
+              alt="Flèche de gauche"
+              onClick={sliderLeft}
+            />
+            <img
+              className="droite"
+              src={arrowRight}
+              alt="Flèche de droite"
+              onClick={sliderRight}
+            />
+          </div>
+          <p className="slideshow__counter">
+            {slideNumber + 1}/{images.length}
+          </p>
+        </>
+      )}
     </div>
   );
 }
