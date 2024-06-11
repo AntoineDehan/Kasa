@@ -6,11 +6,10 @@ function Card() {
   return (
     <div className="card--conteneur">
       {logementList.map((liste) => {
-        const { id, cover, title } = liste;
-
+        const { id, cover, title, pictures } = liste;
         return (
           <div className="card" key={id}>
-            <Link>
+            <Link to="/logement" images={pictures}>
               <img src={cover} alt={title} />
               <h2>{title}</h2>
             </Link>
