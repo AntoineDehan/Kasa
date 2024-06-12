@@ -1,0 +1,81 @@
+@use "../general/style.scss" as *;
+
+.logement {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-bottom: 5%;
+  &__contenu {
+    display: flex;
+    flex-direction: column;
+  }
+  &__titles {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    .host {
+      display: flex;
+      justify-content: space-between;
+      img {
+        border-radius: 50%;
+        width: 38%;
+        height: 38%;
+      }
+      p {
+        color: $main-color;
+        font-size: 1.1rem;
+      }
+    }
+    .titles {
+      display: flex;
+      flex-direction: column;
+      gap: 0px;
+      h2 {
+        color: $main-color;
+        font-size: 2rem;
+        margin-bottom: 0px;
+      }
+      p {
+        font-weight: 500;
+        font-size: 1.1rem;
+        margin-top: 3px;
+      }
+    }
+  }
+  &__info {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    .etiquettes {
+      display: flex;
+      gap: 5px;
+      p {
+        background-color: $main-color;
+        color: white;
+        padding: 10px;
+        border-radius: 18px;
+        font-weight: 600;
+      }
+    }
+  }
+  &__collapses {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    .collapse {
+      width: 45%;
+      &__barre {
+        width: 100%;
+      }
+      &__hidden {
+        width: 100%;
+      }
+      &__content {
+        padding-top: 10px;
+      }
+    }
+  }
+}

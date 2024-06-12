@@ -1,0 +1,15 @@
+* {
+  font-family: Montserrat;
+}
+
+.fa-star {
+  color: lightgray;
+  font-size: 1.7rem;
+  margin-left: 10px;
+}
+
+.rating {
+  color: #ff6060;
+}
+
+/*# sourceMappingURL=style.css.map */

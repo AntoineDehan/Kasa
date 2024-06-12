@@ -9,7 +9,7 @@ function Card() {
         const { id, cover, title, pictures } = liste;
         return (
           <div className="card" key={id}>
-            <Link to="/logement" images={pictures}>
+            <Link to={`/logement/${id}`} images={pictures}>
               <img src={cover} alt={title} />
               <h2>{title}</h2>
             </Link>

@@ -16,7 +16,7 @@ ReactDOM.render(
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/logement" element={<Logement />} />
+        <Route path="/logement/:logementId" element={<Logement />} />
         <Route path="/a-propos" element={<About />} />
         <Route path="/*" element={<Error />} />
         <Route path="/test" element={<TestPage />} />

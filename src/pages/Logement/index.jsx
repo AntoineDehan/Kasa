@@ -1,27 +1,58 @@
-import Slideshow from "../../componants/Slider/index";
+import React from "react";
+import { useParams } from "react-router-dom";
 
-function Logement({ images }) {
+import Slideshow from "../../componants/Slider/index";
+import Error from "../../componants/Error";
+import Collapse from "../../componants/Collapse";
+import Rating from "../../componants/Rating";
+
+import { logementList } from "../../data/logements/logementList";
+
+import "../../styles/css/logement/style.css";
+
+function Logement() {
+  // Je récupère l'ID sur lequel j'ai cliqué depuis le component Card
+  const { logementId } = useParams();
+  console.log(logementId);
+
+  // Je récupère les informations du logement qui correspond à l'ID
+  const logement = logementList.find((logement) => logement.id === logementId);
+
+  if (logement === undefined) {
+    return <Error />;
+  }
+
   return (
-    <div className="logement__conteneur">
-      <Slideshow images={images} />
+    <div className="logement">
+      <Slideshow images={logement.pictures} />
       <div className="logement__contenu">
         <div className="logement__titles">
           <div className="titles">
-            <h2>title</h2>
-            <p>location</p>
+            <h2>{logement.title}</h2>
+            <p>l{logement.location}</p>
           </div>
           <div className="host">
-            <p>hostname</p>
-            {/* <img src=hostpicture alt="Hôte du logement" /> */}
+            <p>{logement.host.name}</p>
+            <img src={logement.host.picture} alt="Hôte du logement" />
           </div>
         </div>
         <div className="logement__info">
-          <div className="etiquettes"></div>
-          <div className="note"></div>
+          <div className="etiquettes">
+            {logement.tags.map((tag) => (
+              <p key={tag}>{tag}</p>
+            ))}
+          </div>
+          {/* <div className="note"></div> */}
+          <Rating scaleValue={logement.rating} />
         </div>
         <div className="logement__collapses">
-          {/* description collapse */}
-          {/* equipements collapse */}
+          <Collapse title="Description" content={logement.description} />
+          <Collapse
+            title="Équipements"
+            content={logement.equipments.map((equipment) => (
+              <p key={equipment}>{equipment}</p>
+            ))}
+          />
         </div>
       </div>
     </div>

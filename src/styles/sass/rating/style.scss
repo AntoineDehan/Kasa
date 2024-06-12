@@ -1,0 +1,11 @@
+@use "../general/style.scss" as *;
+
+.fa-star {
+  color: lightgray;
+  font-size: 1.7rem;
+  margin-left: 10px;
+}
+
+.rating {
+  color: $main-color;
+}
