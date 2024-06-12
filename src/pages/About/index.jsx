@@ -8,7 +8,7 @@ function About() {
   return (
     <div className="main-conteneur">
       <Banner image={Background} titre="" />
-      <div className="collapse--conteneur">
+      <div className="collapse__conteneur">
         {aboutList.map((listebtn) => {
           const { title, content, id } = listebtn;
 

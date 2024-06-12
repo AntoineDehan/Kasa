@@ -4,7 +4,7 @@ import "../../styles/css/card/style.css";
 
 function Card() {
   return (
-    <div className="card--conteneur">
+    <div className="card__conteneur">
       {logementList.map((liste) => {
         const { id, cover, title, pictures } = liste;
         return (

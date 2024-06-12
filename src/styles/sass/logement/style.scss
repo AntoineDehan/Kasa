@@ -3,31 +3,20 @@
 .logement {
   display: flex;
   flex-direction: column;
-  margin-left: 10%;
-  margin-right: 10%;
+  margin-left: 8%;
+  margin-right: 8%;
   margin-bottom: 5%;
   &__contenu {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 20px;
+    margin-bottom: 10px;
   }
   &__titles {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
-    align-items: center;
-    margin-bottom: 10px;
-    .host {
-      display: flex;
-      justify-content: space-between;
-      img {
-        border-radius: 50%;
-        width: 38%;
-        height: 38%;
-      }
-      p {
-        color: $main-color;
-        font-size: 1.1rem;
-      }
-    }
     .titles {
       display: flex;
       flex-direction: column;
@@ -36,6 +25,7 @@
         color: $main-color;
         font-size: 2rem;
         margin-bottom: 0px;
+        width: 90%;
       }
       p {
         font-weight: 500;
@@ -43,11 +33,6 @@
         margin-top: 3px;
       }
     }
-  }
-  &__info {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 10px;
     .etiquettes {
       display: flex;
       gap: 5px;
@@ -60,9 +45,42 @@
       }
     }
   }
+  &__host {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 50%;
+    .host__info {
+      display: flex;
+      justify-content: flex-end;
+      gap: 5px;
+      margin-top: 5px;
+      img {
+        border-radius: 50%;
+        margin: 0;
+        width: 90px;
+        height: 90px;
+        align-self: center;
+      }
+      p {
+        color: $main-color;
+        font-size: 1.3rem;
+        text-align: right;
+        width: 30%;
+      }
+    }
+    .rating__conteneur {
+      display: flex;
+      justify-content: flex-end;
+      gap: 5px;
+      margin-bottom: 25px;
+    }
+  }
   &__collapses {
     display: flex;
     justify-content: space-between;
+    margin-left: 2%;
+    margin-right: 2%;
     margin-top: 10px;
     margin-bottom: 5px;
     .collapse {
@@ -75,6 +93,66 @@
       }
       &__content {
         padding-top: 10px;
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .logement {
+    &__titles {
+      .titles {
+        h2 {
+          font-size: 1.5rem;
+        }
+        p {
+          font-size: 1rem;
+        }
+      }
+      .etiquettes {
+        gap: 6px;
+        p {
+          padding: 9px;
+          font-size: 0.75rem;
+        }
+      }
+    }
+    &__host {
+      .host__info {
+        gap: 5px;
+        p {
+          font-size: 1.1rem;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 680px) {
+  .logement {
+    &__contenu {
+      flex-direction: column;
+    }
+    &__host {
+      flex-direction: row-reverse;
+      align-items: center;
+      width: 100%;
+      .host__info {
+        gap: 10px;
+        img {
+          width: 60px;
+          height: 60px;
+        }
+      }
+      .rating__conteneur {
+        margin-bottom: 0;
+      }
+    }
+    &__collapses {
+      flex-direction: column;
+      gap: 20px;
+      .collapse {
+        width: 100%;
       }
     }
   }

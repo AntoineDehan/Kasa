@@ -19,7 +19,6 @@ ReactDOM.render(
         <Route path="/logement/:logementId" element={<Logement />} />
         <Route path="/a-propos" element={<About />} />
         <Route path="/*" element={<Error />} />
-        <Route path="/test" element={<TestPage />} />
       </Routes>
       <Footer />
     </Router>

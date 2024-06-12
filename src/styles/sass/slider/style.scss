@@ -37,3 +37,11 @@
     }
   }
 }
+
+@media (max-width: 680px) {
+  .slideshow__arrow {
+    img {
+      width: 20px;
+    }
+  }
+}

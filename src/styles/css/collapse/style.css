@@ -1,3 +1,7 @@
+* {
+  font-family: Montserrat;
+}
+
 .collapse {
   display: flex;
   flex-direction: column;
@@ -47,6 +51,22 @@
 }
 .collapse .fa-angle-up:active .collapse__hidden {
   transform: translateY(700px);
+}
+
+@media (max-width: 680px) {
+  .collapse__barre {
+    width: 90%;
+    height: 40px;
+  }
+  .collapse__barre h2 {
+    font-size: 0.9rem;
+  }
+  .collapse__barre .fa-solid {
+    font-size: 1.3rem;
+  }
+  .collapse__hidden {
+    font-size: 0.85rem;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

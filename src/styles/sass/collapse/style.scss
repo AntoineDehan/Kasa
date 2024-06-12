@@ -50,3 +50,20 @@
     }
   }
 }
+
+@media (max-width: 680px) {
+  .collapse__barre {
+    width: 90%;
+    height: 40px;
+    h2 {
+      font-size: 0.9rem;
+    }
+    .fa-solid {
+      font-size: 1.3rem;
+    }
+  }
+
+  .collapse__hidden {
+    font-size: 0.85rem;
+  }
+}

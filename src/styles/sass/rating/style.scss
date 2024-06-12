@@ -9,3 +9,9 @@
 .rating {
   color: $main-color;
 }
+
+@media (max-width: 680px) {
+  .fa-star {
+    font-size: 1.3rem;
+  }
+}

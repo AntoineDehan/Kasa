@@ -12,4 +12,10 @@
   color: #ff6060;
 }
 
+@media (max-width: 680px) {
+  .fa-star {
+    font-size: 1.3rem;
+  }
+}
+
 /*# sourceMappingURL=style.css.map */

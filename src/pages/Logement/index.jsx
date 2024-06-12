@@ -31,29 +31,28 @@ function Logement() {
             <h2>{logement.title}</h2>
             <p>l{logement.location}</p>
           </div>
-          <div className="host">
-            <p>{logement.host.name}</p>
-            <img src={logement.host.picture} alt="Hôte du logement" />
-          </div>
-        </div>
-        <div className="logement__info">
           <div className="etiquettes">
             {logement.tags.map((tag) => (
               <p key={tag}>{tag}</p>
             ))}
           </div>
-          {/* <div className="note"></div> */}
+        </div>
+        <div className="logement__host">
+          <div className="host__info">
+            <p>{logement.host.name}</p>
+            <img src={logement.host.picture} alt="Hôte du logement" />
+          </div>
           <Rating scaleValue={logement.rating} />
         </div>
-        <div className="logement__collapses">
-          <Collapse title="Description" content={logement.description} />
-          <Collapse
-            title="Équipements"
-            content={logement.equipments.map((equipment) => (
-              <p key={equipment}>{equipment}</p>
-            ))}
-          />
-        </div>
+      </div>
+      <div className="logement__collapses">
+        <Collapse title="Description" content={logement.description} />
+        <Collapse
+          title="Équipements"
+          content={logement.equipments.map((equipment) => (
+            <p key={equipment}>{equipment}</p>
+          ))}
+        />
       </div>
     </div>
   );
