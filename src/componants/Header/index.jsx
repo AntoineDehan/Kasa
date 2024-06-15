@@ -10,10 +10,12 @@ function Header() {
       </div>
       <nav>
         {/* la classe name à définir avec une fonctione JS pour active/inactive */}
-        <Link to="/" className="page-active">
+        <Link to="/" className="home">
           Accueil
         </Link>
-        <Link to="/a-propos">À Propos</Link>
+        <Link to="/a-propos" className="about">
+          À Propos
+        </Link>
       </nav>
     </div>
   );
