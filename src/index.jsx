@@ -8,7 +8,6 @@ import Header from "./componants/Header";
 import Footer from "./componants/Footer";
 import Error from "./componants/Error";
 import Logement from "./pages/Logement";
-import TestPage from "./pages/TestPage";
 
 ReactDOM.render(
   <React.StrictMode>
