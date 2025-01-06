@@ -21,9 +21,13 @@
     padding-left: 10px;
     padding-right: 10px;
     overflow: hidden;
+    max-height: 0;
     font-size: 1.3rem;
     transform-origin: top;
-    transition: transform 400ms;
+    transition: max-height 0.4s ease;
+  }
+  .open {
+    max-height: 300px;
   }
   h2 {
     color: white;
@@ -35,19 +39,29 @@
     color: white;
     font-size: 2rem;
   }
-  .fa-angle-down:active {
-    transform: rotate(-180deg);
-    transition: transform 450ms ease-in-out;
-    & .collapse__hidden {
-      transform: translateY(700px);
-    }
+  .fa-angle-down {
+    animation: clic-down 400ms ease-in-out;
   }
-  .fa-angle-up:active {
+  .fa-angle-up {
+    animation: clic-up 400ms ease-in-out;
+  }
+}
+
+@keyframes clic-down {
+  from {
+    transform: rotate(180deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes clic-up {
+  from {
     transform: rotate(-180deg);
-    transition: transform 450ms ease-in-out;
-    & .collapse__hidden {
-      transform: translateY(700px);
-    }
+  }
+  to {
+    transform: rotate(0deg);
   }
 }
 

@@ -14,15 +14,13 @@ function Collapse({ title, content }) {
       <div className="collapse__barre">
         <h2>{title}</h2>
         <div className="collapse__btn" onClick={openstate}>
-          {isOpen ? (
-            <i className="fa-solid fa-angle-down"></i>
-          ) : (
-            <i className="fa-solid fa-angle-up"></i>
-          )}
+          <i
+            className={`fa-solid ${isOpen ? "fa-angle-down" : "fa-angle-up"}`}
+          ></i>
         </div>
       </div>
-      <div className="collapse__hidden">
-        {isOpen && <div className="collapse__content">{content}</div>}
+      <div className={`collapse__hidden ${isOpen ? "open" : ""}`}>
+        <div className="collapse__content">{content}</div>
       </div>
     </div>
   );

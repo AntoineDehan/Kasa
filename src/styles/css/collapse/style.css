@@ -24,9 +24,13 @@
   padding-left: 10px;
   padding-right: 10px;
   overflow: hidden;
+  max-height: 0;
   font-size: 1.3rem;
   transform-origin: top;
-  transition: transform 400ms;
+  transition: max-height 0.4s ease;
+}
+.collapse .open {
+  max-height: 300px;
 }
 .collapse h2 {
   color: white;
@@ -38,21 +42,29 @@
   color: white;
   font-size: 2rem;
 }
-.collapse .fa-angle-down:active {
-  transform: rotate(-180deg);
-  transition: transform 450ms ease-in-out;
+.collapse .fa-angle-down {
+  animation: clic-down 400ms ease-in-out;
 }
-.collapse .fa-angle-down:active .collapse__hidden {
-  transform: translateY(700px);
-}
-.collapse .fa-angle-up:active {
-  transform: rotate(-180deg);
-  transition: transform 450ms ease-in-out;
-}
-.collapse .fa-angle-up:active .collapse__hidden {
-  transform: translateY(700px);
+.collapse .fa-angle-up {
+  animation: clic-up 400ms ease-in-out;
 }
 
+@keyframes clic-down {
+  from {
+    transform: rotate(180deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+@keyframes clic-up {
+  from {
+    transform: rotate(-180deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
 @media (max-width: 680px) {
   .collapse__barre {
     width: 90%;
