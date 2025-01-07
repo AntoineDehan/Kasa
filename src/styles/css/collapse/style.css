@@ -43,10 +43,10 @@
   font-size: 2rem;
 }
 .collapse .fa-angle-down {
-  animation: clic-down 400ms ease-in-out;
+  animation: clic-down 250ms ease-in-out;
 }
 .collapse .fa-angle-up {
-  animation: clic-up 400ms ease-in-out;
+  animation: clic-up 250ms ease-in-out;
 }
 
 @keyframes clic-down {
